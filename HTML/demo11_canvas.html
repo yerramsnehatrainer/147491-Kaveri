@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style= "border:2px solid blue;">
+
+your browser doesnot support canvas
+
+</canvas>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(100,100);
+ctx.stroke();
+</script>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+</script>
+<br><br>
+<canvas id="mycanvas" width="200" height="200" style= "border:2px solid red;">
+
+your browser doesnot support canvas
+
+</canvas>
+
+<script>
+var c = document.getElementById("mycanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,110,40,10,2 * Math.PI);
+ctx.arc(95,100,60,0,8 * Math.PI);
+ctx.arc(100,100,100,0,10 * Math.PI);
+ctx.stroke();
+</script>
+<br>
+<br>
+<canvas id="hello" width="200" height="100" style= "border:2px solid red;">
+
+your browser doesnot support canvas
+
+</canvas>
+<script>
+var c = document.getElementById("hello");
+var ctx = c.getContext("2d");
+ctx.font="30px Arial";
+ctx.fillText("Hello World", 20, 40);
+</script>
+
+<br>
+<br>
+<canvas id="gradient" width="300" height="300" style= "border:2px solid blue;">
+
+your browser doesnot support canvas
+
+</canvas>
+<script>
+var c = document.getElementById("gradient");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+
+ctx.fillStyle=grd;
+ctx.fillRect(10,10,150,80);
+</script>
+<br><br>
+
+<svg width="100" height="100">
+<circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="yellow" />
+</svg>
+
+<svg width="400" height="100">
+<rect width="400" height="100" style="fill:yellow;stroke-width:4;stroke:blue" />
+</svg>
+
+</body>
+</html>
